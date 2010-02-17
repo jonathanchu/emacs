@@ -1,0 +1,1 @@
+(global-set-key "\M-i" 'insert-soft-tab)
