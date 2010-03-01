@@ -14,3 +14,4 @@
 (vendor 'php-mode)
 (vendor 'minimap)
 (vendor 'yaml-mode)
+(vendor 'django-html-mode)

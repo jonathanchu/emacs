@@ -1,3 +1,7 @@
+;; others
+(load "jontourage/python")
+(load "jontourage/javascript")
+
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
@@ -24,3 +28,8 @@
 (add-hook 'markdown-mode-hook '(lambda ()
                                  (define-key markdown-mode-map (kbd "A-r") 'markdown-preview)
                                  (define-key markdown-mode-map (kbd "<tab>") 'defunkt-indent)))
+
+; django html mode
+(add-to-list 'load-path "~/.emacs.d/vendor/django-html-mode")
+(autoload 'django-html-mode "django-html-mode")
+(add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))

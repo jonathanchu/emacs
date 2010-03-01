@@ -29,3 +29,11 @@
 ;; tab
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+
+;; uniquify for better buffer names
+(require 'uniquify)
+(setq uniquify-buffer-name-style 'forward)
+
+;; ido
+(require 'ido)
+(ido-mode t)
