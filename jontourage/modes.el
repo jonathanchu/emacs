@@ -1,6 +1,8 @@
 ;; others
 (load "jontourage/python")
-(load "jontourage/javascript")
+
+;; javascript.el not ready yet
+; (load "jontourage/javascript")
 
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
