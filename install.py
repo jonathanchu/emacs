@@ -11,3 +11,4 @@ if os.path.exists(os.path.join(home, '.emacs')):
 else:
     os.symlink(os.path.join(os.getcwd(), 'emacs.el'), os.path.join(home, '.emacs'))
     os.symlink(os.getcwd(), os.path.join(home, '.emacs.d'))
+    os.system('git submodule update --init')

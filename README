@@ -1,4 +1,0 @@
-git clone 
-python install.py
-emacs/local.el
-(load "jontourage")
