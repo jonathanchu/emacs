@@ -1,8 +1,10 @@
 ;; others
 (load "jontourage/python")
 
-;; javascript.el not ready yet
-; (load "jontourage/javascript")
+;; espresso mode
+(autoload #'espresso-mode "espresso" "Start espresso-mode" t)
+(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -29,7 +31,7 @@
 (setq auto-mode-alist (cons '("\\.ron" . markdown-mode) auto-mode-alist))
 (add-hook 'markdown-mode-hook '(lambda ()
                                  (define-key markdown-mode-map (kbd "A-r") 'markdown-preview)
-                                 (define-key markdown-mode-map (kbd "<tab>") 'defunkt-indent)))
+                                 (define-key markdown-mode-map (kbd "<tab>") 'jontourage-indent)))
 
 ; django html mode
 (add-to-list 'load-path "~/.emacs.d/vendor/django-html-mode")

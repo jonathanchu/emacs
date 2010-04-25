@@ -2,6 +2,10 @@
   (interactive)
   (insert "    "))
 
+(defun jontourage-indent ()
+  (interactive)
+  (insert "  "))
+
 ; for loading libraries in from the vendor directory
 (defun vendor (library)
   (let* ((file (symbol-name library))
