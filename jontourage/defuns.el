@@ -2,7 +2,7 @@
   (interactive)
   (insert "    "))
 
-(defun jontourage-indent ()
+(defun jontourage-mod-2-indent ()
   (interactive)
   (insert "  "))
 
@@ -18,3 +18,13 @@
      ((file-exists-p suffix) (require library)))
     (when (file-exists-p (concat jontourage ".el"))
       (load jontourage))))
+
+; duplicate the current line
+(defun jontourage-duplicate-line ()
+(interactive)
+  (beginning-of-line)
+  (copy-region-as-kill (point) (progn (end-of-line) (point)))
+  (textmate-next-line)
+  (yank)
+  (beginning-of-line)
+  (indent-according-to-mode))

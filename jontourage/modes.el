@@ -31,7 +31,7 @@
 (setq auto-mode-alist (cons '("\\.ron" . markdown-mode) auto-mode-alist))
 (add-hook 'markdown-mode-hook '(lambda ()
                                  (define-key markdown-mode-map (kbd "A-r") 'markdown-preview)
-                                 (define-key markdown-mode-map (kbd "<tab>") 'jontourage-indent)))
+                                 (define-key markdown-mode-map (kbd "<tab>") 'jontourage-mod-2-indent)))
 
 ; django html mode
 (add-to-list 'load-path "~/.emacs.d/vendor/django-html-mode")
