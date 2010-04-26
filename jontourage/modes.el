@@ -1,5 +1,5 @@
 ;; others
-(load "jontourage/python")
+; (load "jontourage/python")
 
 ;; espresso mode
 (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
