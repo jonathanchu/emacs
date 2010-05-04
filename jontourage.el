@@ -7,6 +7,7 @@
 (load "jontourage/theme")
 (load "jontourage/temp_files")
 (load "jontourage/git")
+(load "jontourage/yasnippet")
 
 (vendor 'magit)
 (vendor 'textmate)
@@ -14,4 +15,3 @@
 (vendor 'php-mode)
 (vendor 'minimap)
 (vendor 'yaml-mode)
-(vendor 'django-html-mode)
