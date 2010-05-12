@@ -37,3 +37,6 @@
 ;; ido
 (require 'ido)
 (ido-mode t)
+
+;; cursor
+(setq-default cursor-type 'bar)
