@@ -22,6 +22,9 @@
   '(lambda ()
     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
+; tpl for smarty templates
+(add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
+
 ; markdown
 (add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
 (autoload 'markdown-mode "markdown-mode.el"
