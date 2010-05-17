@@ -1,0 +1,4 @@
+# smarty template-specific
+{foeach from=$$1 item=${2:o} name=${3:f}}
+	$0
+{/foreach}

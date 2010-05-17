@@ -1,0 +1,2 @@
+# smarty template-specific
+{include file="$1"}
