@@ -8,6 +8,7 @@
 (load "jontourage/temp_files")
 (load "jontourage/git")
 (load "jontourage/yasnippet")
+(load "jontourage/django_html")
 
 (vendor 'magit)
 (vendor 'textmate)
