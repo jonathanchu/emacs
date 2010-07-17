@@ -7,7 +7,7 @@ Clone the repository
 Change directories into repo
 	> cd emacs
 
-Run instally command to symlink emacs directory
+Run install.py command to symlink emacs directory
 	> python install.py
 
 Create file called local.el in the repo
