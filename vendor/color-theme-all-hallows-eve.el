@@ -7,7 +7,9 @@
   (interactive)
   (color-theme-install
    '(color-theme-all-hallows-eve
-     ((background-color . "#292929")
+     ; ((background-color . "#292929")
+     ; ((background-color . "#141414")
+     ((background-color . "#000000")
 	  (background-mode . dark)
 	  (cursor-color . "#73597E")
       (foreground-color . "#FFFFFF"))

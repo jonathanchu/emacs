@@ -4,6 +4,9 @@
 ;; share's textmate.el's concept of
 ;; a project root
 
+(add-to-list 'exec-path "/usr/local/bin")
+(setq magit-git-executable "/usr/local/bin/git")
+
 (defun jontourage-git-modeline ()
   (interactive)
   (let ((root (textmate-project-root)))

@@ -40,3 +40,7 @@
 
 ;; cursor
 (setq-default cursor-type 'bar)
+
+;; linum mode
+(require 'linum)
+(global-linum-mode 1)

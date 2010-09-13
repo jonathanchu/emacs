@@ -9,3 +9,6 @@
 
 (load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
 (color-theme-twilight)
+
+; (load-file "~/.emacs.d/vendor/color-theme-inspiration.el")
+; (color-theme-inspiration)
