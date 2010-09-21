@@ -5,6 +5,13 @@
 ;; no splash screen
 (setq inhibit-startup-screen t)
 
+;; no scrollbar
+(set-scroll-bar-mode 'nil)
+
+;; custom font
+(set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+(modify-frame-parameters nil '((wait-for-wm .nil)))
+
 ;; show line number in mode line
 (line-number-mode 1)
 
