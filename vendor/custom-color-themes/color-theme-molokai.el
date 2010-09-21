@@ -14,7 +14,7 @@
    '(color-theme-molokai
      ((foreground-color . "#F8F8F2")
       (background-color . "#1B1D1E")
-      (cursor-color . "#F8F8F0")
+      (cursor-color . "#F35FBC")
       (background-mode . dark))
      (default ((t (:foreground "#F8F8F2" :background "#1B1D1E"))))
      (bold ((t (:weight bold))))
@@ -39,10 +39,11 @@
      (mode-line ((t (:foreground "#F8F8F2" :background "#000000"
                                  :box (:line-width 1 :color "#000000" :style released-button)))))
      (mode-line-buffer-id ((t (:foreground nil :background "#000000" :weight semi-bold))))
-     (mode-line-inactive ((t (:foreground "#BCBCBC" :background "#000000"
-                                          :box (:line-width 1 :color "#232526")))))
-     (mode-line-mousable ((t (:foreground "#BCBCBC" :background "#000000"))))
-     (mode-line-mousable-minor-mode ((t (:foreground "#BCBCBC" :background "#000000"))))
+     (mode-line-inactive ((t (:foreground "#AAAAAA" :background "#000000"
+                                          :box (:line-width 1 :color "#1B1D1E")))))
+     (mode-line-mousable ((t (:foreground "#AAAAAA" :background "#000000"))))
+     (mode-line-mousable-minor-mode ((t (:foreground "#AAAAAA" :background "#000000"))))
+     ;
      (font-lock-builtin-face ((t (:foreground "#A6E22E"))))
      (font-lock-comment-face ((t (:foreground "#465457" :slant italic))))
      (font-lock-comment-delimiter-face ((t (:foreground "#465457" :slant italic))))
@@ -61,7 +62,7 @@
                                               :background "#333333"))))
      (fringe ((t (:background "#232526"))))
      (highlight ((t (:foreground "#000000" :background "#C4BE89"))))
-     (hl-line ((t (:background "#293739"))))
+     (hl-line ((t (:background "#232728"))))
      (icompletep-choices ((t (:foreground "#F92672"))))
      (icompletep-determined ((t (:foreground "#A6E22E"))))
      (icompletep-keys ((t (:foreground "#F92672"))))
