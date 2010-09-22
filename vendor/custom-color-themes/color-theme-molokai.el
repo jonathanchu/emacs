@@ -36,10 +36,12 @@
      (diff-removed ((t (:foreground "#F92672" :weight bold))))
      (escape-glyph ((t (:foreground "#E6DB74"))))
      (minibuffer-prompt ((t (:foreground "#66D9EF"))))
-     (mode-line ((t (:foreground "#F8F8F2" :background "#000000"
+     ; (mode-line ((t (:foreground "#F8F8F2" :background "#000000"
+     (mode-line ((t (:foreground "#FFFFFF" :background "#212121"
                                  :box (:line-width 1 :color "#000000" :style released-button)))))
-     (mode-line-buffer-id ((t (:foreground nil :background "#000000" :weight semi-bold))))
-     (mode-line-inactive ((t (:foreground "#AAAAAA" :background "#000000"
+     (mode-line-buffer-id ((t (:weight semi-bold))))
+     ; (mode-line-inactive ((t (:foreground "#AAAAAA" :background "#232526"
+     (mode-line-inactive ((t (:foreground "#999999" :background "#232526"
                                           :box (:line-width 1 :color "#1B1D1E")))))
      (mode-line-mousable ((t (:foreground "#AAAAAA" :background "#000000"))))
      (mode-line-mousable-minor-mode ((t (:foreground "#AAAAAA" :background "#000000"))))
