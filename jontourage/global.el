@@ -9,7 +9,8 @@
 (set-scroll-bar-mode 'nil)
 
 ;; custom font
-(set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+(set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
 (modify-frame-parameters nil '((wait-for-wm .nil)))
 
 ;; show line number in mode line
@@ -47,6 +48,7 @@
 
 ;; cursor
 (setq-default cursor-type 'bar)
+(blink-cursor-mode 1)
 
 ;; linum mode
 (require 'linum)
