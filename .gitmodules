@@ -1,8 +1,8 @@
-[submodule "/magit"]
+[submodule "vendor/magit"]
 	path = vendor/magit
 	url = git://github.com/technomancy/magit.git
 
-[submodule "/minimap"]
+[submodule "vendor/minimap"]
 	path = vendor/minimap
 	url = git://randomsample.de/minimap.git
 
@@ -14,6 +14,6 @@
 	path = vendor/textmate.el
 	url = git://github.com/defunkt/textmate.el.git
 
-[submodule "twilight-emacs"]
+[submodule "vendor/twilight-emacs"]
 	path = vendor/twilight-emacs
 	url = git://github.com/crafterm/twilight-emacs.git
