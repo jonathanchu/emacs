@@ -9,23 +9,23 @@
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
 
-; magit
+;; magit
 (eval-after-load 'magit
   '(progn
      (set-face-foreground 'magit-diff-add "green3")
      (set-face-foreground 'magit-diff-del "red3")))
 
-; yaml
+;; yaml
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 (add-hook 'yaml-mode-hook 
   '(lambda ()
     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-; tpl for smarty templates
+;; tpl for smarty templates
 (add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
 
-; markdown
+;; markdown
 (add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
 (autoload 'markdown-mode "markdown-mode.el"
    "Major mode for editing Markdown files" t)
@@ -36,7 +36,12 @@
                                  (define-key markdown-mode-map (kbd "A-r") 'markdown-preview)
                                  (define-key markdown-mode-map (kbd "<tab>") 'jontourage-mod-2-indent)))
 
-; django html mode
+;; django html mode
 (add-to-list 'load-path "~/.emacs.d/vendor/django-html-mode")
 (autoload 'django-html-mode "django-html-mode")
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))
+
+;; zencoding mode
+(add-to-list 'load-path "~/vendor/zencoding/")
+(require 'zencoding-mode)
+(add-hook 'sgml-mode-hook 'zencoding-mode)
