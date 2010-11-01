@@ -42,6 +42,6 @@
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))
 
 ;; zencoding mode
-(add-to-list 'load-path "~/vendor/zencoding/")
-(require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode)
+; (add-to-list 'load-path "~/vendor/zencoding/")
+; (require 'zencoding-mode)
+; (add-hook 'sgml-mode-hook 'zencoding-mode)
