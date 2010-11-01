@@ -500,7 +500,7 @@ For more information see `zencoding-mode'."
     nil
   (progn
     (setq zencoding-mode-keymap (make-sparse-keymap))
-    (define-key zencoding-mode-keymap (kbd "<C-return>") 'zencoding-expand-line)))
+    (define-key zencoding-mode-keymap (kbd "<C-S-return>") 'zencoding-expand-line)))
 
 ;;;###autoload
 (define-minor-mode zencoding-mode
