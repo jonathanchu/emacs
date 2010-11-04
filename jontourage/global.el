@@ -50,6 +50,13 @@
 (setq-default cursor-type 'bar)
 (blink-cursor-mode 1)
 
+;; highlight current line
+(global-hl-line-mode 1)
+
+;; highlight brackets
+(require 'paren)
+(show-paren-mode 1)
+
 ;; linum mode
 (require 'linum)
 (global-linum-mode 1)
