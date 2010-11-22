@@ -37,6 +37,7 @@
 ;; tab
 (setq-default tab-width 4)
 (setq-default indent-tabs-mode nil)
+(setq indent-line-function 'insert-tab)
 
 ;; uniquify for better buffer names
 (require 'uniquify)
