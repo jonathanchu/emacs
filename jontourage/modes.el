@@ -24,6 +24,7 @@
 
 ;; tpl for smarty templates
 (add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.twig$" . html-mode))
 
 ;; markdown
 (add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
