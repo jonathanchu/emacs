@@ -61,6 +61,14 @@
      (font-lock-warning-face ((t (:foreground "#FFFFFF"
                                               :background "#333333"))))
      (fringe ((t (:background "#232526"))))
+     
+     (magit-log-sha1 ((t (:foreground "#cf6a4c"))))
+     (magit-log-head-label-local ((t (:foreground "#3387cc"))))
+     (magit-log-head-label-remote ((t (:foreground "#65b042"))))
+     (magit-branch ((t (:foreground "#e9c062"))))
+     (magit-section-title ((t (:foreground "#9b859d"))))
+     (magit-item-highlight ((t (:background "#1f1f1f"))))
+     
      (highlight ((t (:foreground "#000000" :background "#C4BE89"))))
      (hl-line ((t (:background "#000000"))))
      (icompletep-choices ((t (:foreground "#F92672"))))

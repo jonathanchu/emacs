@@ -41,6 +41,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/django-html-mode")
 (autoload 'django-html-mode "django-html-mode")
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))
+(add-to-list 'auto-mode-alist '("\\.twig$" . django-html-mode))
 
 ;; zencoding mode
 ; (add-to-list 'load-path "~/vendor/zencoding/")

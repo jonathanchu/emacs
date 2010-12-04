@@ -1,6 +1,6 @@
 [submodule "vendor/magit"]
 	path = vendor/magit
-	url = git://github.com/technomancy/magit.git
+	url = git://github.com/philjackson/magit.git
 
 [submodule "vendor/minimap"]
 	path = vendor/minimap
