@@ -47,3 +47,10 @@
 ; (add-to-list 'load-path "~/vendor/zencoding/")
 ; (require 'zencoding-mode)
 ; (add-hook 'sgml-mode-hook 'zencoding-mode)
+
+;; full-ack mode
+(add-to-list 'load-path "~/.emacs.d/vendor")
+(autoload 'ack-same "full-ack" nil t)
+(autoload 'ack "full-ack" nil t)
+(autoload 'ack-find-same-file "full-ack" nil t)
+(autoload 'ack-find-file "full-ack" nil t)
