@@ -9,6 +9,7 @@
 (load "jontourage/git")
 (load "jontourage/yasnippet")
 (load "jontourage/django_html")
+(load "jontourage/peepopen")
 
 (vendor 'magit)
 (vendor 'textmate)
