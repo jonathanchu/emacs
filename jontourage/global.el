@@ -68,3 +68,7 @@
 
 ;; for peepopen
 (setq ns-pop-up-frames nil)
+
+;; stop opening a new frame (window) for each file
+(setq ns-pop-up-frames nil)
+(server-start)

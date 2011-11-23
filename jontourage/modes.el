@@ -54,3 +54,15 @@
 (autoload 'ack "full-ack" nil t)
 (autoload 'ack-find-same-file "full-ack" nil t)
 (autoload 'ack-find-file "full-ack" nil t)
+
+;; sass, less
+(add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
+(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
+
+;; ctv
+(add-to-list 'auto-mode-alist '("\\.ctv$" . nxml-mode))
+
+;; hl tags mode
+(require 'hl-tags-mode)
+(add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
+(add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
