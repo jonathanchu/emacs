@@ -72,3 +72,6 @@
 ;; stop opening a new frame (window) for each file
 (setq ns-pop-up-frames nil)
 (server-start)
+
+;; make sure looking at most recent changes
+(global-auto-revert-mode 1)

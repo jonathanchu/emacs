@@ -13,5 +13,8 @@
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-inspiration.el")
 ; (color-theme-inspiration)
 
-(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-molokai.el")
-(color-theme-molokai)
+; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-molokai.el")
+; (color-theme-molokai)
+
+(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-almost-monokai.el")
+(color-theme-almost-monokai)
