@@ -17,3 +17,4 @@
 (vendor 'php-mode)
 (vendor 'minimap)
 (vendor 'yaml-mode)
+(vendor 'emacs-color-theme-soloarized)

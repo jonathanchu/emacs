@@ -16,5 +16,8 @@
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-molokai.el")
 ; (color-theme-molokai)
 
-(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-almost-monokai.el")
-(color-theme-almost-monokai)
+; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-almost-monokai.el")
+; (color-theme-almost-monokai)
+
+(load-file "~/.emacs.d/vendor/emacs-color-theme-solarized/color-theme-solarized.el")
+(color-theme-solarized-dark)
