@@ -69,3 +69,6 @@
 
 ;; soloarized color theme mode
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
+
+;; org mode
+(add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))

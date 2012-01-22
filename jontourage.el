@@ -10,6 +10,7 @@
 (load "jontourage/yasnippet")
 (load "jontourage/django_html")
 (load "jontourage/peepopen")
+(load "jontourage/org_mode")
 
 (vendor 'magit)
 (vendor 'textmate)

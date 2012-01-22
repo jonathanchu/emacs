@@ -75,3 +75,6 @@
 
 ;; make sure looking at most recent changes
 (global-auto-revert-mode 1)
+
+;; fullscreen mode
+(global-set-key (kbd "M-RET") 'ns-toggle-fullscreen)
