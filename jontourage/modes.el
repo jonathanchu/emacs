@@ -63,12 +63,11 @@
 (add-to-list 'auto-mode-alist '("\\.ctv$" . nxml-mode))
 
 ;; hl tags mode
-(require 'hl-tags-mode)
-(add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
-(add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
+; (require 'hl-tags-mode)
+; (add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
+; (add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
 
-;; soloarized color theme mode
-(add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
+
 
 ;; org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))

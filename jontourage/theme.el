@@ -19,5 +19,13 @@
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-almost-monokai.el")
 ; (color-theme-almost-monokai)
 
-(load-file "~/.emacs.d/vendor/emacs-color-theme-solarized/color-theme-solarized.el")
-(color-theme-solarized-dark)
+;; soloarized color theme mode
+; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
+; (load-file "~/.emacs.d/vendor/emacs-color-theme-solarized/color-theme-solarized.el")
+; (color-theme-solarized-dark)
+
+; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-zenburn.el")
+; (color-theme-zenburn)
+
+(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-textmate-monokai.el")
+(color-theme-monokai)
