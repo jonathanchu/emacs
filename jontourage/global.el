@@ -10,7 +10,8 @@
 
 ;; custom font
 ; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
-(set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+; (set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+(set-default-font "-apple-Monaco-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
 (modify-frame-parameters nil '((wait-for-wm .nil)))
 
 ;; show line number in mode line
@@ -59,12 +60,12 @@
 (show-paren-mode 1)
 
 ;; linum mode
-(require 'linum)
-(global-linum-mode 1)
-(setq linum-format 
-    (lambda (line) (propertize 
-        (format (let ((w (length (number-to-string (count-lines (point-min) (point-max)))))) 
-            (concat " %" (number-to-string w) "d ")) line) 'face 'linum)))
+; (require 'linum)
+; (global-linum-mode 1)
+; (setq linum-format 
+;     (lambda (line) (propertize 
+;         (format (let ((w (length (number-to-string (count-lines (point-min) (point-max)))))) 
+;             (concat " %" (number-to-string w) "d ")) line) 'face 'linum)))
 
 ;; for peepopen
 (setq ns-pop-up-frames nil)

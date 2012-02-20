@@ -27,5 +27,9 @@
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-zenburn.el")
 ; (color-theme-zenburn)
 
-(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-textmate-monokai.el")
-(color-theme-monokai)
+; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-textmate-monokai.el")
+; (color-theme-monokai)
+
+(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-heroku.el")
+(color-theme-heroku)
+
