@@ -26,6 +26,9 @@
 	 
      (mode-line ((t (:foreground "#030303" :background "#bdbdbd"
                                  :box (:line-width 1 :color "#000000" :style released-button)))))
+     (minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
+	 
+	 ;; magit
      (magit-log-sha1 ((t (:foreground "#cf6a4c"))))
      (magit-log-head-label-local ((t (:foreground "#3387cc"))))
      (magit-log-head-label-remote ((t (:foreground "#65b042"))))
@@ -39,12 +42,17 @@
 	 ;; font lock
      (font-lock-builtin-face ((t (:foreground "#ffffff"))))
      (font-lock-comment-face ((t (:foreground "#aeaeae"))))
+	 (font-lock-comment-delimiter-face ((t (:foreground "#aeaeae"))))
+	 (font-lock-constant-face ((t (:foreground "#bfebbf"))))
+     (font-lock-doc-face ((t (:foreground "#8fb28f"))))
+     (font-lock-doc-string-face ((t (:foreground "#94bff3"))))
      (font-lock-function-name-face ((t (:foreground "#ffffff"))))
      (font-lock-keyword-face ((t (:foreground "#fbde2d"))))
+     (font-lock-negation-char-face ((t (:foreground "#dcdccc"))))
+     (font-lock-preprocessor-face ((t (:foreground "#3f3f3f"))))
      (font-lock-string-face ((t (:foreground "#adc6ee"))))
      (font-lock-type-face ((t (:foreground"#ffffff"))))
-     (font-lock-variable-name-face ((t (:foreground "#ffffff"))))
-     (minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
+     (font-lock-variable-name-face ((t (:foreground "#fbde2d"))))
      (font-lock-warning-face ((t (:foreground "Red" :bold t))))
      
 	 ;; show-paren
@@ -74,7 +82,7 @@
      (org-done ((t (:bold t :weight bold :foreground "#afd8af"))))
      (org-headline-done ((t (:foreground "#afd8af"))))
      (org-level-1 ((t (:foreground "#dfaf8f"))))
-     (org-level-2 ((t (:foreground "#5f7f5f"))))
+     (org-level-2 ((t (:foreground "#aeaeae"))))
      (org-level-3 ((t (:foreground "#94bff3"))))
      (org-level-4 ((t (:foreground "#e0cf9f"))))
      (org-level-5 ((t (:foreground "#93e0e3"))))

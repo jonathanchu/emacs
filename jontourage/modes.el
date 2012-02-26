@@ -67,7 +67,6 @@
 ; (add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
 ; (add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
 
-
-
 ;; org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
+(add-to-list 'auto-mode-alist '("\\.org_archive\\'" . org-mode))
