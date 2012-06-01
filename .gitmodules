@@ -17,7 +17,3 @@
 [submodule "vendor/magit"]
 	path = vendor/magit
 	url = https://github.com/philjackson/magit.git
-
-[submodule "vendor/emacs-powerline"]
-	path = vendor/emacs-powerline
-	url = https://github.com/jonathanchu/emacs-powerline.git

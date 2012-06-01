@@ -77,3 +77,8 @@
 
 ;; fullscreen mode
 (global-set-key (kbd "M-RET") 'ns-toggle-fullscreen)
+
+;; whitespace cleanup
+(global-whitespace-mode 1)
+(setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
+(setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
