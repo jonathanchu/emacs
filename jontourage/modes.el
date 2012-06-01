@@ -70,3 +70,12 @@
 ;; org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
 (add-to-list 'auto-mode-alist '("\\.org_archive\\'" . org-mode))
+
+;; peepopen
+(load "peepopen")
+
+;; powerline
+(require 'cl)
+(add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
+(require 'powerline)
+

@@ -4,4 +4,8 @@
 (setq org-mobile-inbox-for-pull "~/org/flagged.org")
 
 (setq org-log-done t)
-(setq org-agenda-files (list "~/Dropbox/MobileOrg/*.org"))
+
+(setq org-agenda-files (list "~/org/tastesavant.org"
+							 "~/org/home.org"
+                             "~/org/rachaelray.org"))
+							 

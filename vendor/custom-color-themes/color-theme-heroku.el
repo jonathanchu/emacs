@@ -24,8 +24,10 @@
      (highlight ((t (:background "#2b2b2b"))))
      (region ((t (:background "#6c91be"))))
 	 
-     (mode-line ((t (:foreground "#030303" :background "#bdbdbd"
-                                 :box (:line-width 1 :color "#000000" :style released-button)))))
+     ; (mode-line ((t (:foreground "#030303" :background "#bdbdbd"
+     ;                             :box (:line-width 1 :color "#000000" :style released-button)))))
+     (mode-line ((t (:foreground "#030303" :background "#bdbdbd"))))
+	 
      (minibuffer-prompt ((t (:foreground "#729fcf" :bold t))))
 	 
 	 ;; magit
@@ -42,14 +44,8 @@
 	 ;; font lock
      (font-lock-builtin-face ((t (:foreground "#ffffff"))))
      (font-lock-comment-face ((t (:foreground "#aeaeae"))))
-	 (font-lock-comment-delimiter-face ((t (:foreground "#aeaeae"))))
-	 (font-lock-constant-face ((t (:foreground "#bfebbf"))))
-     (font-lock-doc-face ((t (:foreground "#8fb28f"))))
-     (font-lock-doc-string-face ((t (:foreground "#94bff3"))))
      (font-lock-function-name-face ((t (:foreground "#ffffff"))))
      (font-lock-keyword-face ((t (:foreground "#fbde2d"))))
-     (font-lock-negation-char-face ((t (:foreground "#dcdccc"))))
-     (font-lock-preprocessor-face ((t (:foreground "#3f3f3f"))))
      (font-lock-string-face ((t (:foreground "#adc6ee"))))
      (font-lock-type-face ((t (:foreground"#ffffff"))))
      (font-lock-variable-name-face ((t (:foreground "#fbde2d"))))
@@ -78,9 +74,9 @@
      (org-checkbox ((t (:background "#5f5f5f" :foreground "white"
                                     :box (:line-width 1 :style released-button)))))
      (org-date ((t (:foreground "#8cd0d3" :underline t))))
-     (org-deadline-announce ((t (:foreground "#bc8383"))))
-     (org-done ((t (:bold t :weight bold :foreground "#afd8af"))))
-     (org-headline-done ((t (:foreground "#afd8af"))))
+     (org-deadline-announce ((t (:foreground "#8787FF"))))
+     (org-done ((t (:bold t :weight bold :foreground "#bff740"))))
+     (org-headline-done ((t (:foreground "#8787ff"))))
      (org-level-1 ((t (:foreground "#dfaf8f"))))
      (org-level-2 ((t (:foreground "#aeaeae"))))
      (org-level-3 ((t (:foreground "#94bff3"))))
@@ -89,8 +85,8 @@
      (org-level-6 ((t (:foreground "#8fb28f"))))
      (org-level-7 ((t (:foreground "#8c5353"))))
      (org-level-8 ((t (:foreground "#4c7073"))))
-     (org-table ((t (:foreground "#9fc59f"))))
-     (org-todo ((t (:bold t :foreground "#cc9393" :weight bold))))
+     (org-table ((t (:foreground "#8787FF"))))
+     (org-todo ((t (:bold t :foreground "#e21d24" :weight bold))))
      (org-upcoming-deadline ((t (:inherit font-lock-keyword-face))))
      (org-warning ((t (:bold t :foreground "#cc9393"d :weight bold))))
      )))
