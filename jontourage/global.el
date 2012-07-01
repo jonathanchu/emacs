@@ -82,3 +82,5 @@
 (global-whitespace-mode 1)
 (setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
 (setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
+
+(display-time-mode 1)

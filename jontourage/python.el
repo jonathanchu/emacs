@@ -11,9 +11,6 @@
   ;; Emacs key binding
   (define-key coffee-mode-map [(meta r)] 'coffee-compile-buffer)
 
-  ;; Riding edge.
-  (setq coffee-command "~/dev/coffee")
-
   ;; Compile '.coffee' files on every save
   (and (file-exists-p (buffer-file-name))
        (file-exists-p (coffee-compiled-file-name))
