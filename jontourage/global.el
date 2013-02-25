@@ -10,8 +10,12 @@
 
 ;; custom font
 ; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+; (set-default-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
 ; (set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
-(set-default-font "-apple-Monaco-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
+; (set-default-font "-apple-Monaco-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
+(set-default-font "-apple-Ubuntu_Mono-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
+; (set-default-font "-apple-Anonymous-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
+; (set-default-font "-apple-Inconsolata-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
 (modify-frame-parameters nil '((wait-for-wm .nil)))
 
 ;; show line number in mode line
@@ -62,9 +66,9 @@
 ;; linum mode
 ; (require 'linum)
 ; (global-linum-mode 1)
-; (setq linum-format 
-;     (lambda (line) (propertize 
-;         (format (let ((w (length (number-to-string (count-lines (point-min) (point-max)))))) 
+; (setq linum-format
+;     (lambda (line) (propertize
+;         (format (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
 ;             (concat " %" (number-to-string w) "d ")) line) 'face 'linum)))
 
 
@@ -84,3 +88,9 @@
 (setq whitespace-style '(trailing space-before-tab indentation empty space-after-tab)) ;; only show bad whitespace
 
 (display-time-mode 1)
+
+; fill column indicator
+(require 'fill-column-indicator)
+(setq-default fci-rule-column 79)
+(setq fci-rule-width 1)
+(setq fci-rule-color "LightGrey")

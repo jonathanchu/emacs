@@ -73,7 +73,6 @@
              (expand-file-name root)
              (invocation-name)))))
 
-
 ;;;###autoload
 (defun peepopen-bind-keys ()
   (cond ((featurep 'aquamacs) (peepopen-bind-aquamacs-keys))

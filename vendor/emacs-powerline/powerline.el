@@ -13,6 +13,8 @@
 
 ;;; Code:
 
+(require 'cl)
+
 (defvar powerline-color1)
 (defvar powerline-color2)
 
@@ -25,123 +27,63 @@
 (set-face-attribute 'mode-line-inactive nil
                     :box nil)
 
-(scroll-bar-mode -1)
+(if (functionp 'scroll-bar-mode)
+    (scroll-bar-mode -1))
+
+(defun get-arrow-dots
+  (leftp width height)
+  (mapconcat
+   (apply-partially 'format "\"%s\"")
+   (mapcar
+    (lambda (n)
+       (let* ((nx (if (< n (/ height 2)) n (- height n)))
+              (dots (make-string nx ?.))
+              (spaces (make-string (- width nx) ? )))
+         (if leftp (concat dots spaces) (concat spaces dots))))
+    (number-sequence 1 height))
+   ",\n"))
+
+(defun get-arrow-xpm
+  (direction width height &optional color1 color2)
+  "Create an XPM left arrow."
+  (let* ((leftp (eq 'left direction))
+         (fg (if leftp color1 color2))
+         (bg (if leftp color2 color1)))
+    (create-image
+     (format "/* XPM */
+static char * arrow_left[] = {
+\"%d %d 2 1\",
+\". c %s\",
+\"  c %s\",
+%s};"
+             width height
+             (if fg fg "None")
+             (if bg bg "None")
+             (get-arrow-dots leftp width height))
+     'xpm t :ascent 'center)))
+
+(defun mode-line-height ()
+  "The mode line height with its current font face."
+  (- (elt (window-pixel-edges) 3)
+     (elt (window-inside-pixel-edges) 3)))
+
+(defun proportional-arrow-xpm
+  (direction color1 color2)
+  (let* ((r 1.5)
+         (m-height (mode-line-height))
+         (height (if (evenp m-height) m-height (+ 1 m-height)))
+         (width (floor (/ height r))))
+    (get-arrow-xpm direction width height color1 color2)))
 
 (defun arrow-left-xpm
   (color1 color2)
   "Return an XPM left arrow string representing."
-  (create-image
-   (format "/* XPM */
-static char * arrow_left[] = {
-\"12 18 2 1\",
-\". c %s\",
-\"  c %s\",
-\".           \",
-\"..          \",
-\"...         \",
-\"....        \",
-\".....       \",
-\"......      \",
-\".......     \",
-\"........    \",
-\".........   \",
-\".........   \",
-\"........    \",
-\".......     \",
-\"......      \",
-\".....       \",
-\"....        \",
-\"...         \",
-\"..          \",
-\".           \"};"
-           (if color1 color1 "None")
-           (if color2 color2 "None"))
-   'xpm t :ascent 'center))
+  (proportional-arrow-xpm 'left color1 color2))
 
 (defun arrow-right-xpm
   (color1 color2)
   "Return an XPM right arrow string representing."
-  (create-image
-   (format "/* XPM */
-static char * arrow_right[] = {
-\"12 18 2 1\",
-\". c %s\",
-\"  c %s\",
-\"           .\",
-\"          ..\",
-\"         ...\",
-\"        ....\",
-\"       .....\",
-\"      ......\",
-\"     .......\",
-\"    ........\",
-\"   .........\",
-\"   .........\",
-\"    ........\",
-\"     .......\",
-\"      ......\",
-\"       .....\",
-\"        ....\",
-\"         ...\",
-\"          ..\",
-\"           .\"};"
-           (if color2 color2 "None")
-           (if color1 color1 "None"))
-   'xpm t :ascent 'center))
-
-(defun arrow14-left-xpm
-  (color1 color2)
-  "Return an XPM left arrow string representing."
-  (create-image
-   (format "/* XPM */
-static char * arrow_left[] = {
-\"12 14 2 1\",
-\". c %s\",
-\"  c %s\",
-\".           \",
-\"..          \",
-\"...         \",
-\"....        \",
-\".....       \",
-\"......      \",
-\".......     \",
-\".......     \",
-\"......      \",
-\".....       \",
-\"....        \",
-\"...         \",
-\"..          \",
-\".           \"};"
-           (if color1 color1 "None")
-           (if color2 color2 "None"))
-   'xpm t :ascent 'center))
-
-(defun arrow14-right-xpm
-  (color1 color2)
-  "Return an XPM right arrow string representing."
-  (create-image
-   (format "/* XPM */
-static char * arrow_right[] = {
-\"12 14 2 1\",
-\". c %s\",
-\"  c %s\",
-\"           .\",
-\"          ..\",
-\"         ...\",
-\"        ....\",
-\"       .....\",
-\"      ......\",
-\"     .......\",
-\"     .......\",
-\"      ......\",
-\"       .....\",
-\"        ....\",
-\"         ...\",
-\"          ..\",
-\"           .\"};"
-           (if color2 color2 "None")
-           (if color1 color1 "None"))
-   'xpm t :ascent 'center))
+  (proportional-arrow-xpm 'right color1 color2))
 
 (defun curve-right-xpm
   (color1 color2)
@@ -291,8 +233,6 @@ install the memoized function over the original function."
 
 (memoize 'arrow-left-xpm)
 (memoize 'arrow-right-xpm)
-(memoize 'arrow14-left-xpm)
-(memoize 'arrow14-right-xpm)
 (memoize 'curve-left-xpm)
 (memoize 'curve-right-xpm)
 (memoize 'half-xpm)
@@ -346,8 +286,6 @@ install the memoized function over the original function."
          (propertize " " 'display
                      (cond ((eq powerline-arrow-shape 'arrow)
                             (arrow-left-xpm color1 color2))
-                           ((eq powerline-arrow-shape 'arrow14)
-                            (arrow14-left-xpm color1 color2))
                            ((eq powerline-arrow-shape 'curve)
                             (curve-left-xpm color1 color2))
                            ((eq powerline-arrow-shape 'half)
@@ -357,11 +295,10 @@ install the memoized function over the original function."
                      'local-map (make-mode-line-mouse-map
                                  'mouse-1 (lambda () (interactive)
                                             (setq powerline-arrow-shape
-                                                  (cond ((eq powerline-arrow-shape 'arrow)   'arrow14)
-                                                        ((eq powerline-arrow-shape 'arrow14) 'curve)
-                                                        ((eq powerline-arrow-shape 'curve)   'half)
-                                                        ((eq powerline-arrow-shape 'half)    'arrow)
-                                                        (t                                   'arrow)))
+                                                  (cond ((eq powerline-arrow-shape 'arrow) 'curve)
+                                                        ((eq powerline-arrow-shape 'curve) 'half)
+                                                        ((eq powerline-arrow-shape 'half)  'arrow)
+                                                        (t                                 'arrow)))
                                             (redraw-modeline))))
        ""))))
 
@@ -374,8 +311,6 @@ install the memoized function over the original function."
        (propertize " " 'display
                    (cond ((eq powerline-arrow-shape 'arrow)
                           (arrow-right-xpm color1 color2))
-                         ((eq powerline-arrow-shape 'arrow14)
-                          (arrow14-right-xpm color1 color2))
                          ((eq powerline-arrow-shape 'curve)
                           (curve-right-xpm color1 color2))
                          ((eq powerline-arrow-shape 'half)
@@ -385,11 +320,10 @@ install the memoized function over the original function."
                    'local-map (make-mode-line-mouse-map
                                'mouse-1 (lambda () (interactive)
                                           (setq powerline-arrow-shape
-                                                (cond ((eq powerline-arrow-shape 'arrow)   'arrow14)
-                                                      ((eq powerline-arrow-shape 'arrow14) 'curve)
-                                                      ((eq powerline-arrow-shape 'curve)   'half)
-                                                      ((eq powerline-arrow-shape 'half)    'arrow)
-                                                      (t                                   'arrow)))
+                                                (cond ((eq powerline-arrow-shape 'arrow) 'curve)
+                                                      ((eq powerline-arrow-shape 'curve) 'half)
+                                                      ((eq powerline-arrow-shape 'half)  'arrow)
+                                                      (t                                 'arrow)))
                                           (redraw-modeline))))
        "")
      (if arrow
@@ -403,6 +337,10 @@ install the memoized function over the original function."
      (if (or (not string) (string= string ""))
          ""
        (propertize " " 'face plface)))))
+
+;; get-scroll-bar-mode is not available in emacs 23.2
+(if (not (functionp 'get-scroll-bar-mode))
+    (defun get-scroll-bar-mode () scroll-bar-mode))
 
 (defun powerline-make-fill
   (color)
@@ -470,7 +408,7 @@ install the memoized function over the original function."
                                                          (not powerline-buffer-size-suffix))
                                                    (redraw-modeline)))))
 (defpowerline rmw         "%*")
-(defpowerline major-mode  (propertize mode-name
+(defpowerline major-mode  (propertize (format-mode-line mode-name)
                                       'help-echo "Major mode\n\ mouse-1: Display major mode menu\n\ mouse-2: Show help for major mode\n\ mouse-3: Toggle minor modes"
                                       'local-map (let ((map (make-sparse-keymap)))
                                                    (define-key map [mode-line down-mouse-1]
@@ -511,7 +449,6 @@ install the memoized function over the original function."
 (defpowerline status      "%s")
 (defpowerline emacsclient mode-line-client)
 (defpowerline vc vc-mode)
-; (defpowerline vc display-time-mode)
 
 (defpowerline percent-xpm (propertize "  "
                                       'display

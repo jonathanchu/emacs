@@ -11,6 +11,7 @@
 (load "jontourage/django_html")
 (load "jontourage/coffee")
 
+(vendor 'ack)
 (vendor 'magit)
 (vendor 'textmate)
 (textmate-mode)

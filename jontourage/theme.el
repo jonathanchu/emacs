@@ -16,13 +16,11 @@
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-molokai.el")
 ; (color-theme-molokai)
 
-; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-almost-monokai.el")
-; (color-theme-almost-monokai)
-
 ;; soloarized color theme mode
 ; (add-to-list 'load-path "~/.emacs.d/vendor/emacs-color-theme-solarized")
 ; (load-file "~/.emacs.d/vendor/emacs-color-theme-solarized/color-theme-solarized.el")
 ; (color-theme-solarized-dark)
+; (color-theme-solarized-light)
 
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-zenburn.el")
 ; (color-theme-zenburn)
@@ -30,6 +28,16 @@
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-textmate-monokai.el")
 ; (color-theme-monokai)
 
-(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-heroku.el")
-(color-theme-heroku)
+; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-heroku.el")
+; (color-theme-heroku)
 
+(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
+(color-theme-tomorrow-night-eighties)
+; (color-theme-tomorrow-night-bright)
+; (color-theme-tomorrow-night)
+; (color-theme-tomorrow)
+; (color-theme-tomorrow-night-blue)
+
+(custom-set-faces
+ '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))

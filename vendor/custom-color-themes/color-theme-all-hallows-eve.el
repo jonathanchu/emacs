@@ -44,6 +44,8 @@
      (ido-only-match ((t (:foreground "#8F9D6A"))))
      (mumamo-background-chunk-submode ((t (:background "#222222"))))
 	 
-	 (highlight ((t (:background "red"))))
+	 ; (highlight ((t (:background "red"))))
+	 (highlight ((t (:background "#2b2b2b"))))
+     (region ((t (:background "#6c91be"))))
 	 (italic ((t (:italic t))))
 	 (underline ((t (:underline t)))))))
