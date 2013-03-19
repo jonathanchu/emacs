@@ -18,7 +18,7 @@
 ;; yaml
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
-(add-hook 'yaml-mode-hook 
+(add-hook 'yaml-mode-hook
   '(lambda ()
     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
@@ -56,8 +56,8 @@
 (autoload 'ack-find-file "full-ack" nil t)
 
 ;; sass, less
-(add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
-(add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
+; (add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
+; (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
 
 ;; ctv
 (add-to-list 'auto-mode-alist '("\\.ctv$" . nxml-mode))
@@ -89,3 +89,11 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/haml-mode")
 (require 'haml-mode)
 (add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
+
+;; less mode
+(require 'less-mode)
+(autoload 'less-mode "less-mode")
+
+;; scss mode
+(require 'scss-mode)
+(autoload 'scss-mode "scss-mode")

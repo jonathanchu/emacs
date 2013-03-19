@@ -94,3 +94,7 @@
 (setq-default fci-rule-column 79)
 (setq fci-rule-width 1)
 (setq fci-rule-color "LightGrey")
+
+; autopair
+(require 'autopair)
+(autopair-global-mode t)
