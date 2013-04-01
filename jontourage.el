@@ -12,7 +12,7 @@
 (load "jontourage/coffee")
 
 (vendor 'ack)
-(vendor 'magit)
+; (vendor 'magit)
 (vendor 'textmate)
 (textmate-mode)
 (vendor 'php-mode)

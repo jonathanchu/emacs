@@ -61,7 +61,7 @@ theme will be used."
                  aqua "#66cccc"
                  blue "#6699cc"
                  purple "#cc99cc"
-				 foreground "#ffffff"))
+                 foreground "#ffffff"))
 
           ((eq variant 'night-blue)
            (setq background "#002451"
@@ -105,7 +105,7 @@ theme will be used."
        (default ((t (:background ,background :foreground ,foreground))))
        (fringe ((t (:background ,current-line))))
        (minibuffer-prompt ((t (:foreground ,blue))))
-       (mode-line ((t (:background ,current-line :foreground ,foreground))))
+       ;; (mode-line ((t (:background ,current-line :foreground ,foreground))))
        (region ((t (:background ,selection))))
 
        ;; Font-lock stuff

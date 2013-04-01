@@ -38,6 +38,18 @@
 ; (color-theme-tomorrow)
 ; (color-theme-tomorrow-night-blue)
 
+; (load-file "~/.emacs.d/elpa/color-theme-github-0.0.3/color-theme-github.el")
+; (color-theme-github)
+
+; (load-file "~/.emacs.d/elpa/color-theme-molokai-0.1/color-theme-molokai.el")
+; (color-theme-molokai)
+
+; (load-file "~/.emacs.d/elpa/color-theme-monokai-0.0.5/color-theme-monokai.el")
+; (color-theme-monokai)
+
+; (load-file "~/.emacs.d/elpa/color-theme-railscasts-0.0.2/color-theme-railscasts.el")
+; (color-theme-railscasts)
+
 (custom-set-faces
  '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
