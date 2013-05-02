@@ -932,7 +932,7 @@
 			  [(20130306 1515)
 			   nil "Monochromatic version of the Phoenix theme [source: github]" single])
  (phi-search .
-	     [(20130329 1915)
+	     [(20130401 1356)
 	      nil "inferior isearch compatible with \"multiple-cursors\" [source: github]" single])
  (ph .
      [(20130312 2037)
@@ -1800,7 +1800,7 @@
 		[(20130216 1417)
 		 nil "helm source for color-moccur.el [source: github]" single])
  (helm-ag .
-	  [(20130322 10)
+	  [(20130401 1248)
 	   ((helm
 	     (1 0)))
 	   "the silver search with helm interface [source: github]" single])
@@ -3080,7 +3080,7 @@
 	    (1 4)))
 	  "Auto-complete source for Js2-mode, with navigation [source: github]" tar])
  (ac-helm .
-	  [(20130329 1904)
+	  [(20130401 1417)
 	   ((helm
 	     (20130328))
 	    (auto-complete
