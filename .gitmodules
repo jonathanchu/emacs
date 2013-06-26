@@ -1,19 +1,19 @@
 [submodule "vendor/minimap"]
-	path = vendor/minimap
-	url = git://randomsample.de/minimap.git
+    path = vendor/minimap
+    url = git://randomsample.de/minimap.git
 
 [submodule "vendor/yaml-mode.el"]
-	path = vendor/yaml-mode.el
-	url = git://github.com/yoshiki/yaml-mode.git
+    path = vendor/yaml-mode.el
+    url = git://github.com/yoshiki/yaml-mode.git
 
 [submodule "vendor/textmate.el"]
-	path = vendor/textmate.el
-	url = git://github.com/defunkt/textmate.el.git
+    path = vendor/textmate.el
+    url = git://github.com/defunkt/textmate.el.git
 
 [submodule "vendor/twilight-emacs"]
-	path = vendor/twilight-emacs
-	url = git://github.com/crafterm/twilight-emacs.git
+    path = vendor/twilight-emacs
+    url = git://github.com/crafterm/twilight-emacs.git
 
 [submodule "vendor/magit"]
-	path = vendor/magit
-	url = https://github.com/philjackson/magit.git
+    path = vendor/magit
+    url = https://github.com/magit/magit.git
