@@ -1,3 +1,5 @@
+(package-initialize)
+
 (add-to-list 'load-path "~/.emacs.d/vendor")
 
 (load "jontourage/global")
@@ -10,6 +12,7 @@
 (load "jontourage/yasnippet")
 (load "jontourage/django_html")
 (load "jontourage/coffee")
+(load "jontourage/org_mode")
 
 (vendor 'ack)
 ; (vendor 'magit)

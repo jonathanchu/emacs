@@ -1,6 +1,8 @@
 (require 'color-theme)
 (setq color-theme-is-global t)
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/custom-color-themes")
+
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-all-hallows-eve.el")
 ; (color-theme-all-hallows-eve)
 
@@ -32,9 +34,9 @@
 ; (color-theme-heroku)
 
 (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
-(color-theme-tomorrow-night-eighties)
+; (color-theme-tomorrow-night-eighties)
 ; (color-theme-tomorrow-night-bright)
-; (color-theme-tomorrow-night)
+(color-theme-tomorrow-night)
 ; (color-theme-tomorrow)
 ; (color-theme-tomorrow-night-blue)
 

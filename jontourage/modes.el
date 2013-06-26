@@ -98,3 +98,20 @@
 ;; scss mode
 (require 'scss-mode)
 (autoload 'scss-mode "scss-mode")
+
+;; lorem ipsum
+(require 'lorem-ipsum)
+(add-hook 'sgml-mode-hook (lambda ()
+    (setq Lorem-ipsum-paragraph-separator "<br><br>\n"
+        Lorem-ipsum-sentence-separator "&nbsp;&nbsp;"
+        Lorem-ipsum-list-beginning "<ul>\n"
+        Lorem-ipsum-list-bullet "<li>"
+        Lorem-ipsum-list-item-end "</li>\n"
+        Lorem-ipsum-list-end "</ul>\n")))
+
+(autoload 'Lorem-ipsum-insert-paragraphs "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-sentences "lorem-ipsum" "" t)
+(autoload 'Lorem-ipsum-insert-list "lorem-ipsum" "" t)
+
+;; tramp
+(setq tramp-default-method "ssh")

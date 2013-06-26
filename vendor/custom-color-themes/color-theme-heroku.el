@@ -9,10 +9,11 @@
 ;; 2. Load this file i.e. (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-heroku.el")
 ;; 3. (color-theme-heroku)
 
-(defun color-theme-heroku ()
-  (interactive)
-  (color-theme-install
-   '(color-theme-heroku
+(deftheme color-theme-heroku
+  "Heroku color theme")
+
+(custom-theme-set-faces
+ 'color-theme-heroku
       ((background-color . "#3f464c")
       (background-mode . light)
       (border-color . "#ffffff")
@@ -89,5 +90,5 @@
      (org-todo ((t (:bold t :foreground "#e21d24" :weight bold))))
      (org-upcoming-deadline ((t (:inherit font-lock-keyword-face))))
      (org-warning ((t (:bold t :foreground "#cc9393"d :weight bold))))
-     )))
+     )
 (provide 'color-theme-heroku)

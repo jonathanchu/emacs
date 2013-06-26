@@ -24,9 +24,9 @@
 ; (set-default-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
 ; (set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
 ; (set-default-font "-apple-Monaco-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
-(set-default-font "-apple-Ubuntu_Mono-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+; (set-default-font "-apple-Ubuntu_Mono-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 ; (set-default-font "-apple-Anonymous-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
-; (set-default-font "-apple-Inconsolata-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
+(set-default-font "-apple-Inconsolata-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 (modify-frame-parameters nil '((wait-for-wm .nil)))
 
 ;; show line number in mode line
@@ -114,3 +114,6 @@
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                         ("marmalade" . "http://marmalade-repo.org/packages/")
                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
+; window splits auto-balance
+(setq window-combination-resize t)
