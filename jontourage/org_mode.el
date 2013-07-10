@@ -1,8 +1,8 @@
 ;; mobileorg settings
-(setq org-directory "~/org")
-(setq org-mobile-inbox-for-pull "~/org/inbox.org")
+(setq org-directory "~/Dropbox/org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 
 (setq org-log-done t)
 
-(setq org-mobile-files '("~/org"))
+(setq org-mobile-files '("~/Dropbox/org"))

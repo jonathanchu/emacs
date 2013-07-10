@@ -115,3 +115,11 @@
 
 ;; tramp
 (setq tramp-default-method "ssh")
+
+;; deft
+(require 'deft)
+(setq deft-extension "org")
+(setq deft-directory "~/Dropbox/org")
+(setq deft-text-mode 'org-mode)
+(setq deft-use-filename-as-title t)
+
