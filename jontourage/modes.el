@@ -24,8 +24,9 @@
     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
 ;; tpl for smarty templates
-(add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
-(add-to-list 'auto-mode-alist '("\\.twig$" . html-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
+;; (add-to-list 'auto-mode-alist '("\\.twig$" . html-mode))
+(add-to-list 'auto-mode-alist '("\\.tpl?\\'" . web-mode))
 
 ;; markdown
 (add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
@@ -118,8 +119,17 @@
 
 ;; deft
 (require 'deft)
-(setq deft-extension "org")
-(setq deft-directory "~/Dropbox/org")
-(setq deft-text-mode 'org-mode)
+;(setq deft-extension "org")
+(setq deft-extension "txt")
+; (setq deft-directory "~/Dropbox/org")
+(setq deft-directory "~/Dropbox/Simplenote")
+; (setq deft-text-mode 'org-mode)
+(setq deft-text-mode 'text-mode)
 (setq deft-use-filename-as-title t)
 
+;; web-mode
+;; (require 'web-mode)
+;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+
+(require 'nav)
+(nav-disable-overeager-window-splitting)
