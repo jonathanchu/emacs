@@ -3,3 +3,10 @@
 local.el
 eshell
 session*
+elpa
+.org-id-locations
+tramp
+url
+ac-comphist.dat
+*.egg-info
+*.pyc

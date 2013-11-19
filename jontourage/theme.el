@@ -1,16 +1,21 @@
 (require 'color-theme)
-(setq color-theme-is-global t)
+(color-theme-initialize)
+; (setq color-theme-is-global t)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/custom-color-themes")
+; (color-theme-initialize)
 
-; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-all-hallows-eve.el")
-; (color-theme-all-hallows-eve)
+;; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-all-hallows-eve.el")
+;; (color-theme-all-hallows-eve)
 
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-railscasts.el")
 ; (color-theme-railscasts)
 
-; (load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
-; (color-theme-twilight)
+;; (load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
+;; (color-theme-twilight)
+
+;; (load-file "~/.emacs.d/vendor/custom-color-themes/monokai-dark-soda-theme.el")
+;; (monokai-dark-soda)
 
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-inspiration.el")
 ; (color-theme-inspiration)
@@ -32,9 +37,10 @@
 
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-heroku.el")
 ; (color-theme-heroku)
+;; (load-theme 'heroku t)
 
 (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
-; (color-theme-tomorrow-night-eighties)
+;; (color-theme-tomorrow-night-eighties)
 ; (color-theme-tomorrow-night-bright)
 (color-theme-tomorrow-night)
 ; (color-theme-tomorrow)
@@ -43,11 +49,11 @@
 ; (load-file "~/.emacs.d/elpa/color-theme-github-0.0.3/color-theme-github.el")
 ; (color-theme-github)
 
-; (load-file "~/.emacs.d/elpa/color-theme-molokai-0.1/color-theme-molokai.el")
-; (color-theme-molokai)
+;; (load-file "~/.emacs.d/elpa/color-theme-molokai-0.1/color-theme-molokai.el")
+;; (color-theme-molokai)
 
-; (load-file "~/.emacs.d/elpa/color-theme-monokai-0.0.5/color-theme-monokai.el")
-; (color-theme-monokai)
+;; (load-file "~/.emacs.d/elpa/color-theme-monokai-0.0.5/color-theme-monokai.el")
+;; (color-theme-monokai)
 
 ; (load-file "~/.emacs.d/elpa/color-theme-railscasts-0.0.2/color-theme-railscasts.el")
 ; (color-theme-railscasts)

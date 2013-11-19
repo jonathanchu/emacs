@@ -8,3 +8,6 @@
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
 (global-set-key "\C-cb" 'org-iswitchb)
+
+;; sorting
+(global-set-key (kbd "M-`") 'sort-lines)

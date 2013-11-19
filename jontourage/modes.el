@@ -1,6 +1,10 @@
 ;; others
 ; (load "jontourage/python")
 (require 'python)
+; (setq py-shell-name "/usr/local/bin/python")
+; (require 'python-mode)
+; (setq py-load-pymacs-p 'nil)
+; (require 'auto-complete)
 
 ;; espresso mode
 (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
@@ -131,5 +135,57 @@
 ;; (require 'web-mode)
 ;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
+;; nav-mode
 (require 'nav)
 (nav-disable-overeager-window-splitting)
+
+;; dirtree mode
+(require 'dirtree)
+(defun ep-dirtree()
+    (interactive)
+    (dirtree-in-buffer eproject-root t))
+
+;; speedbar
+(setq speedbar-mode-hook '(lambda ()
+    (interactive)
+    (other-frame 0)))
+
+;; pymacs
+; (add-to-list 'load-path "~/.emacs.d/vendor/pymacs")
+(add-to-list 'load-path "~/.emacs.d/elpa/pymacs-0.25")
+(autoload 'pymacs-apply "pymacs")
+(autoload 'pymacs-call "pymacs")
+(autoload 'pymacs-eval "pymacs" nil t)
+(autoload 'pymacs-exec "pymacs" nil t)
+(autoload 'pymacs-load "pymacs" nil t)
+(autoload 'pymacs-autoload "pymacs")
+
+(setenv "PYMACS_PYTHON" "/usr/local/bin/python")
+
+;; ropemacs
+(require 'pymacs)
+(add-to-list 'load-path "~/.emacs.d/vendor/ropemacs")
+(pymacs-load "ropemacs" "rope-")
+
+(setq py-load-pymacs-p 'nil)
+
+;; jedi
+;; (add-hook 'python-mode-hook 'jedi:setup)
+;; (setq jedi:complete-on-dot t)                 ; optional
+;; (setq jedi:setup-keys t)                      ; optional
+
+;; projectile
+(projectile-global-mode)
+
+;; grizzl
+(setq projectile-completion-system 'grizzl)
+
+;; flx-ido
+(require 'flx-ido)
+;; (ido-mode 1)
+(ido-everywhere 1)
+(flx-ido-mode 1)
+;; disable ido faces to see flx highlights.
+(setq ido-use-faces nil)
+
+;; (setq ido-enable-flex-matching t)

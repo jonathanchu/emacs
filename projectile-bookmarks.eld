@@ -1,0 +1,1 @@
+("~/projects/emacs/" "~/projects/yesgraph.com/yes/")
