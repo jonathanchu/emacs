@@ -21,12 +21,13 @@
 
 ;; custom font
 ; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
-; (set-default-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
-; (set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
-; (set-default-font "-apple-Monaco-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
-; (set-default-font "-apple-Ubuntu_Mono-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
-; (set-default-font "-apple-Anonymous-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Monaco-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Ubuntu_Mono-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Anonymous-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
 (set-default-font "-apple-Inconsolata-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Source_Sans_pro-medium-normal-normal-*-14-*-*-*-m-0-iso10646-1")
 (modify-frame-parameters nil '((wait-for-wm .nil)))
 
 ;; show line number in mode line
@@ -85,7 +86,7 @@
 
 ;; stop opening a new frame (window) for each file (for peepopen)
 (setq ns-pop-up-frames nil)
-(server-start)
+;; (server-start)
 
 ;; make sure looking at most recent changes
 (global-auto-revert-mode 1)
@@ -106,9 +107,9 @@
 (setq fci-rule-width 1)
 (setq fci-rule-color "LightGrey")
 
-; autopair
-(require 'autopair)
-(autopair-global-mode t)
+;; autopair
+;; (require 'autopair)
+;; (autopair-global-mode t)
 
 ; packages
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
@@ -117,3 +118,11 @@
 
 ; window splits auto-balance
 (setq window-combination-resize t)
+
+(require 'package)
+(add-to-list 'package-archives
+    '("marmalade" .
+      "http://marmalade-repo.org/packages/"))
+(package-initialize)
+
+(setq default-directory "~/")
