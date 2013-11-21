@@ -11,3 +11,7 @@
 
 ;; sorting
 (global-set-key (kbd "M-`") 'sort-lines)
+
+;; deletion
+(global-set-key (kbd "C-D") 'delete-char)
+(global-set-key (kbd "C-S-D") 'kill-word)
