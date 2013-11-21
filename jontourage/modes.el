@@ -1,15 +1,11 @@
 ;; others
 ; (load "jontourage/python")
 (require 'python)
-; (setq py-shell-name "/usr/local/bin/python")
-; (require 'python-mode)
-; (setq py-load-pymacs-p 'nil)
-; (require 'auto-complete)
 
 ;; espresso mode
-(autoload #'espresso-mode "espresso" "Start espresso-mode" t)
-(add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-(add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+;; (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
+;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
+;; (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
 
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -30,7 +26,7 @@
 ;; tpl for smarty templates
 ;; (add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.twig$" . html-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl?\\'" . web-mode))
+;; (add-to-list 'auto-mode-alist '("\\.tpl?\\'" . web-mode))
 
 ;; markdown
 (add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
@@ -55,11 +51,11 @@
 ; (add-hook 'sgml-mode-hook 'zencoding-mode)
 
 ;; full-ack mode
-(add-to-list 'load-path "~/.emacs.d/vendor/full-ack")
-(autoload 'ack-same "full-ack" nil t)
-(autoload 'ack "full-ack" nil t)
-(autoload 'ack-find-same-file "full-ack" nil t)
-(autoload 'ack-find-file "full-ack" nil t)
+;; (add-to-list 'load-path "~/.emacs.d/vendor/full-ack")
+;; (autoload 'ack-same "full-ack" nil t)
+;; (autoload 'ack "full-ack" nil t)
+;; (autoload 'ack-find-same-file "full-ack" nil t)
+;; (autoload 'ack-find-file "full-ack" nil t)
 
 ;; sass, less
 ; (add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
@@ -146,9 +142,15 @@
     (dirtree-in-buffer eproject-root t))
 
 ;; speedbar
-(setq speedbar-mode-hook '(lambda ()
-    (interactive)
-    (other-frame 0)))
+;; (setq speedbar-mode-hook '(lambda ()
+;;     (interactive)
+;;     (other-frame 0)))
+
+;; python-mode
+(autoload 'python-mode "python-mode" "Python Mode." t)
+(add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
+(add-to-list 'interpreter-mode-alist '("python" . python-mode))
+;; (require 'python-mode)
 
 ;; pymacs
 ; (add-to-list 'load-path "~/.emacs.d/vendor/pymacs")
@@ -166,26 +168,40 @@
 (require 'pymacs)
 (add-to-list 'load-path "~/.emacs.d/vendor/ropemacs")
 (pymacs-load "ropemacs" "rope-")
+(setq ropemacs-enable-autoimport t)
 
 (setq py-load-pymacs-p 'nil)
 
-;; jedi
-;; (add-hook 'python-mode-hook 'jedi:setup)
-;; (setq jedi:complete-on-dot t)                 ; optional
-;; (setq jedi:setup-keys t)                      ; optional
+;; auto-complete
+(require 'auto-complete)
+(global-auto-complete-mode t)
 
 ;; projectile
 (projectile-global-mode)
-
-;; grizzl
 (setq projectile-completion-system 'grizzl)
 
 ;; flx-ido
 (require 'flx-ido)
-;; (ido-mode 1)
-(ido-everywhere 1)
 (flx-ido-mode 1)
 ;; disable ido faces to see flx highlights.
 (setq ido-use-faces nil)
 
-;; (setq ido-enable-flex-matching t)
+;; flymake-easy
+(require 'flymake-easy)
+
+;; flymake-python-pyflakes
+(require 'flymake-python-pyflakes)
+(add-hook 'python-mode-hook 'flymake-mode)
+(add-hook 'python-mode-hook 'flymake-python-pyflakes-load)
+(setq flymake-python-pyflakes-executable "flake8")
+(require 'flymake-cursor)
+
+(setq gc-cons-threshold 20000000)
+
+;; jshint-mode
+(add-to-list 'load-path "~/.emacs.d/vendor/jshint-mode")
+(require 'flymake-jshint)
+(add-hook 'javascript-mode-hook
+     (lambda () (flymake-mode t)))
+
+(add-hook 'find-file-hook 'flymake-find-file-hook)
