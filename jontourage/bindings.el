@@ -17,5 +17,5 @@
 (global-set-key (kbd "C-S-D") 'kill-word)
 
 ;; font-size
-(define-key global-map (kbd "C-+") 'text-scale-increase)
+(define-key global-map (kbd "C-=") 'text-scale-increase)
 (define-key global-map (kbd "C--") 'text-scale-decrease)
