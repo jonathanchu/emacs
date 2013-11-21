@@ -15,7 +15,6 @@
 (load "jontourage/org_mode")
 
 (vendor 'ack)
-; (vendor 'magit)
 (vendor 'textmate)
 (textmate-mode)
 (vendor 'php-mode)
