@@ -205,3 +205,4 @@
      (lambda () (flymake-mode t)))
 
 (add-hook 'find-file-hook 'flymake-find-file-hook)
+(defun flymake-xml-init ())
