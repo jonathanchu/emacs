@@ -18,7 +18,7 @@
 
 ;; font-size
 (define-key global-map (kbd "C-=") 'text-scale-increase)
-(define-key global-map (kbd "C--") 'text-scale-decrease)
+(define-key global-map (kbd "M-_") 'text-scale-decrease)
 
 ;; mo-git-blame
 (global-set-key [?\C-c ?g ?c] 'mo-git-blame-current)
