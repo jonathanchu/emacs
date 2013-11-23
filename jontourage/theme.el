@@ -37,12 +37,12 @@
 
 ; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-heroku.el")
 ; (color-theme-heroku)
-;; (load-theme 'heroku t)
+(load-theme 'heroku t)
 
-(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
+;; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
 ;; (color-theme-tomorrow-night-eighties)
 ; (color-theme-tomorrow-night-bright)
-(color-theme-tomorrow-night)
+;; (color-theme-tomorrow-night)
 ; (color-theme-tomorrow)
 ; (color-theme-tomorrow-night-blue)
 
