@@ -3,7 +3,6 @@
 local.el
 eshell
 session*
-elpa
 .org-id-locations
 tramp
 url
