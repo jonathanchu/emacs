@@ -27,15 +27,15 @@
 
 ;; (load-theme 'heroku t)
 
-;; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
-;; (color-theme-tomorrow-night-eighties)
+(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
+(color-theme-tomorrow-night-eighties)
 ;; (color-theme-tomorrow-night-bright)
 ;; (color-theme-tomorrow-night)
 ; (color-theme-tomorrow)
 ; (color-theme-tomorrow-night-blue)
 
-(require 'color-theme-sanityinc-tomorrow)
-(color-theme-sanityinc-tomorrow-eighties)
+;; (require 'color-theme-sanityinc-tomorrow)
+;; (color-theme-sanityinc-tomorrow-eighties)
 
 ;; (load-file "~/.emacs.d/elpa/color-theme-molokai-0.1/color-theme-molokai.el")
 ;; (color-theme-molokai)
