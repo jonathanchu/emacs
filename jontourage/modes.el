@@ -181,10 +181,10 @@
 (setq projectile-completion-system 'grizzl)
 
 ;; flx-ido
-(require 'flx-ido)
-(flx-ido-mode 1)
+;; (require 'flx-ido)
+;; (flx-ido-mode 1)
 ;; disable ido faces to see flx highlights.
-(setq ido-use-faces nil)
+;; (setq ido-use-faces nil)
 
 ;; flymake-easy
 (require 'flymake-easy)
@@ -211,3 +211,8 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/mo-git-blame")
 (autoload 'mo-git-blame-file "mo-git-blame" nil t)
 (autoload 'mo-git-blame-current "mo-git-blame" nil t)
+
+;; ido-vertical-mode
+(require 'ido-vertical-mode)
+(ido-mode 1)
+(ido-vertical-mode 1)
