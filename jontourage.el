@@ -18,5 +18,4 @@
 (vendor 'textmate)
 (textmate-mode)
 (vendor 'php-mode)
-(vendor 'minimap)
 (vendor 'yaml-mode)
