@@ -70,19 +70,19 @@
 (blink-cursor-mode 1)
 
 ;; highlight current line
-(global-hl-line-mode 1)
+;; (global-hl-line-mode 1)
 
 ;; highlight brackets
 (require 'paren)
 (show-paren-mode 1)
 
 ;; linum mode
-; (require 'linum)
-; (global-linum-mode 1)
-; (setq linum-format
-;     (lambda (line) (propertize
-;         (format (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
-;             (concat " %" (number-to-string w) "d ")) line) 'face 'linum)))
+(require 'linum)
+(global-linum-mode 1)
+(setq linum-format
+    (lambda (line) (propertize
+        (format (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+            (concat " %" (number-to-string w) "d ")) line) 'face 'linum)))
 
 
 ;; stop opening a new frame (window) for each file (for peepopen)
@@ -127,3 +127,15 @@
 (package-initialize)
 
 (setq default-directory "~/")
+
+;; play nice
+(define-coding-system-alias 'UTF-8 'utf-8)
+
+;; scroll one line at a time
+(setq scroll-step 1)
+(setq mouse-wheel-scroll-amount '(1 ((shift) . 1)))
+
+;; highlight current line in linum mode
+(require 'hlinum)
+(hlinum-activate)
+(setq linum-highlight-in-all-buffersp t)
