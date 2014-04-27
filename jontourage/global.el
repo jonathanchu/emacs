@@ -2,17 +2,6 @@
 (when (functionp 'tool-bar-mode)
   (tool-bar-mode -1))
 
-;; define toggle-fullscreen for now
-(defun toggle-fullscreen ()
-  "Toggle full screen"
-  (interactive)
-  (when window-system
-    (set-frame-parameter
-     nil 'fullscreen
-     (when (not (frame-parameter nil 'fullscreen)) 'fullboth))))
-
-(global-set-key (kbd "<C-s-268632070>") 'toggle-fullscreen)
-
 ;; no splash screen
 (setq inhibit-startup-screen t)
 
@@ -49,11 +38,11 @@
 ;; set encoding
 (prefer-coding-system 'utf-8)
 
+;; play nice
+(define-coding-system-alias 'UTF-8 'utf-8)
+
 ;; allows syntax highlighting to work among other things
 (global-font-lock-mode 1)
-
-;; transparency using alpha values
-; (add-to-list 'default-frame-alist '(alpha 97 50))
 
 ;; tab
 (setq-default tab-width 4)
@@ -90,7 +79,6 @@
 
 ;; stop opening a new frame (window) for each file (for peepopen)
 (setq ns-pop-up-frames nil)
-;; (server-start)
 
 ;; make sure looking at most recent changes
 (global-auto-revert-mode 1)
@@ -105,7 +93,7 @@
 
 (display-time-mode 1)
 
-; fill column indicator
+;; fill column indicator
 (require 'fill-column-indicator)
 (setq-default fci-rule-column 79)
 (setq fci-rule-width 1)
