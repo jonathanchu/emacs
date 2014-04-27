@@ -1,11 +1,6 @@
 ;; others
 ; (load "jontourage/python")
-(require 'python)
-
-;; espresso mode
-;; (autoload #'espresso-mode "espresso" "Start espresso-mode" t)
-;; (add-to-list 'auto-mode-alist '("\\.js$" . espresso-mode))
-;; (add-to-list 'auto-mode-alist '("\\.json$" . espresso-mode))
+;; (require 'python)
 
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
@@ -23,11 +18,6 @@
   '(lambda ()
     (define-key yaml-mode-map "\C-m" 'newline-and-indent)))
 
-;; tpl for smarty templates
-;; (add-to-list 'auto-mode-alist '("\\.tpl$" . html-mode))
-;; (add-to-list 'auto-mode-alist '("\\.twig$" . html-mode))
-;; (add-to-list 'auto-mode-alist '("\\.tpl?\\'" . web-mode))
-
 ;; markdown
 (add-to-list 'load-path "~/.emacs.d/vendor/markdown-mode")
 (autoload 'markdown-mode "markdown-mode.el"
@@ -43,26 +33,10 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/django-html-mode")
 (autoload 'django-html-mode "django-html-mode")
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))
-(add-to-list 'auto-mode-alist '("\\.twig$" . django-html-mode))
-
-;; zencoding mode
-; (add-to-list 'load-path "~/vendor/zencoding/")
-; (require 'zencoding-mode)
-; (add-hook 'sgml-mode-hook 'zencoding-mode)
-
-;; full-ack mode
-;; (add-to-list 'load-path "~/.emacs.d/vendor/full-ack")
-;; (autoload 'ack-same "full-ack" nil t)
-;; (autoload 'ack "full-ack" nil t)
-;; (autoload 'ack-find-same-file "full-ack" nil t)
-;; (autoload 'ack-find-file "full-ack" nil t)
 
 ;; sass, less
 ; (add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
 ; (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
-
-;; ctv
-(add-to-list 'auto-mode-alist '("\\.ctv$" . nxml-mode))
 
 ;; hl tags mode
 ; (require 'hl-tags-mode)
@@ -80,17 +54,6 @@
 (require 'cl)
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
 (require 'powerline)
-
-;; coffee mode
-(add-to-list 'load-path "~/.emacs.d/vendor/coffee-mode")
-(require 'coffee-mode)
-(add-to-list 'auto-mode-alist '("\\.coffee$" . coffee-mode))
-(add-to-list 'auto-mode-alist '("Cakefile" . coffee-mode))
-
-;; haml mode
-(add-to-list 'load-path "~/.emacs.d/vendor/haml-mode")
-(require 'haml-mode)
-(add-to-list 'auto-mode-alist '("\\.haml$" . haml-mode))
 
 ;; less mode
 (require 'less-mode)
@@ -119,17 +82,10 @@
 
 ;; deft
 (require 'deft)
-;(setq deft-extension "org")
 (setq deft-extension "txt")
-; (setq deft-directory "~/Dropbox/org")
 (setq deft-directory "~/Dropbox/Simplenote")
-; (setq deft-text-mode 'org-mode)
 (setq deft-text-mode 'text-mode)
 (setq deft-use-filename-as-title t)
-
-;; web-mode
-;; (require 'web-mode)
-;; (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 
 ;; nav-mode
 (require 'nav)
@@ -186,6 +142,9 @@
 ;; disable ido faces to see flx highlights.
 ;; (setq ido-use-faces nil)
 
+;; flycheck
+;; (add-hook 'python-mode-hook 'flycheck-mode)
+
 ;; flymake-easy
 (require 'flymake-easy)
 
@@ -216,3 +175,15 @@
 (require 'ido-vertical-mode)
 (ido-mode 1)
 (ido-vertical-mode 1)
+
+;; mobileorg settings
+(setq org-directory "~/Dropbox/org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-log-done t)
+(setq org-mobile-files '("~/Dropbox/org"))
+
+;; yasnippet
+(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-0.8.0")
+(require 'yasnippet)
+(yas-global-mode 1)
