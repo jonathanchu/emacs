@@ -20,16 +20,19 @@
 (set-scroll-bar-mode 'nil)
 
 ;; custom font
-; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
 ;; (set-default-font "-apple-Menlo-medium-normal-normal-*-18-*-*-*-m-0-iso10646-1")
-(set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
+;; (set-default-font "-apple-Meslo_LG_S_DZ-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
 ;; (set-default-font "-apple-Monaco-medium-normal-normal-*-11-*-*-*-m-0-iso10646-1")
 ;; (set-default-font "-apple-Ubuntu_Mono-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
 ;; (set-default-font "-apple-Anonymous-medium-normal-normal-*-13-*-*-*-m-0-iso10646-1")
-;; (set-default-font "-apple-Inconsolata-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
+(set-default-font "-apple-Inconsolata-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
 ;; (set-default-font "-apple-CosmicSansNeueMono-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
 ;; (set-default-font "-apple-Source_Sans_pro-medium-normal-normal-*-15-*-*-*-m-0-iso10646-1")
 (modify-frame-parameters nil '((wait-for-wm .nil)))
+
+(set-face-attribute 'default nil :height 160)
+(setq-default line-spacing 4)
 
 ;; show line number in mode line
 (line-number-mode 1)
