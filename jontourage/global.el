@@ -142,3 +142,8 @@
 (require 'hlinum)
 (hlinum-activate)
 (setq linum-highlight-in-all-buffersp t)
+
+;; save place
+(require 'saveplace)
+(setq-default save-place t)
+(setq save-place-file "~/.emacs.d/saved-places")
