@@ -115,13 +115,10 @@
 ;; (require 'autopair)
 ;; (autopair-global-mode t)
 
-; packages
+;; packages
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
                         ("marmalade" . "http://marmalade-repo.org/packages/")
                         ("melpa" . "http://melpa.milkbox.net/packages/")))
-
-; window splits auto-balance
-(setq window-combination-resize t)
 
 (require 'package)
 (add-to-list 'package-archives
@@ -129,10 +126,14 @@
       "http://marmalade-repo.org/packages/"))
 (package-initialize)
 
+;; window splits auto-balance
+(setq window-combination-resize t)
+
+;; set the default starting directory
 (setq default-directory "~/")
 
-;; play nice
-(define-coding-system-alias 'UTF-8 'utf-8)
+;; add /usr/local/bin path to executable path
+(setq exec-path (append exec-path '("/usr/local/bin/")))
 
 ;; scroll one line at a time
 (setq scroll-step 1)
