@@ -1,5 +1,4 @@
 ;; others
-; (load "jontourage/python")
 (require 'python)
 
 ;; all modes
@@ -33,15 +32,6 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/django-html-mode")
 (autoload 'django-html-mode "django-html-mode")
 (add-to-list 'auto-mode-alist '("\\.[sx]?html?\\'" . django-html-mode))
-
-;; sass, less
-; (add-to-list 'auto-mode-alist '("\\.scss$" . css-mode))
-; (add-to-list 'auto-mode-alist '("\\.less$" . css-mode))
-
-;; hl tags mode
-; (require 'hl-tags-mode)
-; (add-hook 'sgml-mode-hook (lambda () (hl-tags-mode 1)))
-; (add-hook 'nxml-mode-hook (lambda () (hl-tags-mode 1)))
 
 ;; org mode
 (add-to-list 'auto-mode-alist '("\\.org\\'" . org-mode))
@@ -97,19 +87,12 @@
     (interactive)
     (dirtree-in-buffer eproject-root t))
 
-;; speedbar
-;; (setq speedbar-mode-hook '(lambda ()
-;;     (interactive)
-;;     (other-frame 0)))
-
 ;; python-mode
 (autoload 'python-mode "python-mode" "Python Mode." t)
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))
 (add-to-list 'interpreter-mode-alist '("python" . python-mode))
-;; (require 'python-mode)
 
 ;; pymacs
-; (add-to-list 'load-path "~/.emacs.d/vendor/pymacs")
 (add-to-list 'load-path "~/.emacs.d/elpa/pymacs-0.25")
 (autoload 'pymacs-apply "pymacs")
 (autoload 'pymacs-call "pymacs")
@@ -135,15 +118,6 @@
 ;; projectile
 (projectile-global-mode)
 (setq projectile-completion-system 'grizzl)
-
-;; flx-ido
-;; (require 'flx-ido)
-;; (flx-ido-mode 1)
-;; disable ido faces to see flx highlights.
-;; (setq ido-use-faces nil)
-
-;; flycheck
-;; (add-hook 'python-mode-hook 'flycheck-mode)
 
 ;; flymake-easy
 (require 'flymake-easy)
