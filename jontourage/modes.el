@@ -1,6 +1,6 @@
 ;; others
 ; (load "jontourage/python")
-;; (require 'python)
+(require 'python)
 
 ;; all modes
 (add-hook 'before-save-hook 'delete-trailing-whitespace)
