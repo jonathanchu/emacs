@@ -7,7 +7,6 @@
 
 ;; no scrollbar
 (if (functionp 'set-scroll-bar-mode) (set-scroll-bar-mode 'nil))
-;; (set-scroll-bar-mode 'nil)
 
 ;; custom font
 ;; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
@@ -63,9 +62,6 @@
 (setq-default cursor-type 'bar)
 (blink-cursor-mode 1)
 
-;; highlight current line
-;; (global-hl-line-mode 1)
-
 ;; highlight brackets
 (require 'paren)
 (show-paren-mode 1)
@@ -85,9 +81,6 @@
 ;; make sure looking at most recent changes
 (global-auto-revert-mode 1)
 
-;; fullscreen mode
-(global-set-key (kbd "M-RET") 'toggle-fullscreen)
-
 ;; whitespace cleanup
 (global-whitespace-mode 1)
 (setq whitespace-action '(auto-cleanup)) ;; automatically clean up bad whitespace
@@ -100,10 +93,6 @@
 (setq-default fci-rule-column 79)
 (setq fci-rule-width 1)
 (setq fci-rule-color "LightGrey")
-
-;; autopair
-;; (require 'autopair)
-;; (autopair-global-mode t)
 
 ;; packages
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
