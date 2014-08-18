@@ -191,3 +191,9 @@
 ;; smex
 (require 'smex)
 (smex-initialize)
+
+;; git-timemachine
+(require 'git-timemachine)
+
+;; winner-mode
+(winner-mode 1)
