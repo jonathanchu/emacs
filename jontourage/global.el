@@ -41,6 +41,7 @@
 
 ;; play nice
 (define-coding-system-alias 'UTF-8 'utf-8)
+(define-coding-system-alias 'utf8 'utf-8)
 
 ;; allows syntax highlighting to work among other things
 (global-font-lock-mode 1)
