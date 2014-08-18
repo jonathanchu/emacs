@@ -38,9 +38,22 @@
 ;; (color-theme-molokai)
 
 ;; (load-file "~/.emacs.d/elpa/color-theme-railscasts-0.0.2/color-theme-railscasts.el")
-(load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-railscasts.el")
-(color-theme-railscasts)
+;; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-railscasts.el")
+;; (color-theme-railscasts)
+
+;; (load-theme 'base16-monokai t)
+
+;; (load-file "~/.emacs.d/vendor/custom-color-themes/atom-dark-theme.el")
+(load-file "~/.emacs.d/vendor/custom-color-themes/oceanic-eighties-theme.el")
+
+;; (load-file "~/.emacs.d/vendor/custom-color-themes/justine256-theme.el")
+
+
+;(custom-set-faces
+; '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+; '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
+;#4182c4
 
 (custom-set-faces
- '(mode-line ((t (:foreground "#030303" :background "#bdbdbd" :box nil))))
+ '(mode-line ((t (:foreground "#030303" :background "#4182c4" :box nil))))
  '(mode-line-inactive ((t (:foreground "#f9f9f9" :background "#666666" :box nil)))))
