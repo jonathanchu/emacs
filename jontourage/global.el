@@ -141,3 +141,6 @@
 (require 'saveplace)
 (setq-default save-place t)
 (setq save-place-file "~/.emacs.d/saved-places")
+
+(setq initial-scratch-message nil)
+(setq initial-major-mode 'python-mode)
