@@ -6,7 +6,8 @@
 (setq inhibit-startup-screen t)
 
 ;; no scrollbar
-(set-scroll-bar-mode 'nil)
+(if (functionp 'set-scroll-bar-mode) (set-scroll-bar-mode 'nil))
+;; (set-scroll-bar-mode 'nil)
 
 ;; custom font
 ;; (set-default-font "-apple-Menlo-medium-normal-normal-*-12-*-*-*-m-0-iso10646-1")
