@@ -133,3 +133,9 @@
 
 (setq initial-scratch-message nil)
 (setq initial-major-mode 'python-mode)
+
+; nice fonts in OS X
+(setq mac-allow-anti-aliasing t)
+
+; y or n
+(defalias 'yes-or-no-p 'y-or-n-p)
