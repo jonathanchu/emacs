@@ -11,7 +11,7 @@
 ;; (load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
 ;; (color-theme-twilight)
 
-;; (load-file "~/.emacs.d/vendor/custom-color-themes/monokai-dark-soda-theme.el")
+;;(load-file "~/.emacs.d/vendor/custom-color-themes/monokai-dark-soda-theme.el")
 ;; (monokai-dark-soda)
 
 ;; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-inspiration.el")
@@ -25,7 +25,9 @@
 ;; (load-theme 'solarized-dark t)
 ;; (load-theme 'solarized-light t)
 
-;; (load-theme 'heroku t)
+; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-heroku.el")
+; (color-theme-heroku)
+; (load-theme 'heroku t)
 
 ;; (load-file "~/.emacs.d/vendor/custom-color-themes/color-theme-tomorrow.el")
 ;; (color-theme-tomorrow-night-eighties)

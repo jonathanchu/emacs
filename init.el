@@ -34,7 +34,7 @@
 (setq user-full-name "Jonathan Chu"
       user-mail-address "jonathan.chu@me.com")
 
-(add-to-list 'load-path "~/.emacs.d")
+(add-to-list 'load-path "~/.emacs.d/lisp")
 
 (defvar current-user
       (getenv
