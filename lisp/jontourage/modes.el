@@ -172,7 +172,7 @@
 (winner-mode 1)
 
 ;; py-isort
-(add-to-list 'load-path "~/.emacs.d/vendor")
+;; (add-to-list 'load-path "~/.emacs.d/vendor")
 (require 'py-isort)
 (add-hook 'before-save-hook 'py-isort-before-save)
 
