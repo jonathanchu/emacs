@@ -158,9 +158,9 @@
 (setq org-mobile-files '("~/Dropbox/org"))
 
 ;; yasnippet
-(add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-0.8.0")
-(require 'yasnippet)
-(yas-global-mode 1)
+;; (add-to-list 'load-path "~/.emacs.d/elpa/yasnippet-20141117.327")
+;; (require 'yasnippet)
+;; (yas-global-mode 1)
 
 ;; smex
 (require 'smex)
