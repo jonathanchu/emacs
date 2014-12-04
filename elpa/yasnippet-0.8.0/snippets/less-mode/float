@@ -1,3 +1,0 @@
-#name : float
-# --
-float: ${1:left};
