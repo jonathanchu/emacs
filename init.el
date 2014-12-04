@@ -43,5 +43,6 @@
 (message "Your Emacs is powering up... Be patient, Master %s!" current-user)
 
 (load "local")
+(load "emacs")
 
 ;;; init.el ends here
