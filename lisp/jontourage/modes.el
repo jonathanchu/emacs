@@ -41,9 +41,13 @@
 (load "peepopen")
 
 ;; powerline
-(require 'cl)
+;; (require 'cl)
 (add-to-list 'load-path "~/.emacs.d/vendor/emacs-powerline")
 (require 'powerline)
+
+;; milkypostman's powerline
+;; (require 'powerline)
+;; (powerline-default-theme)
 
 ;; less mode
 (require 'less-mode)
