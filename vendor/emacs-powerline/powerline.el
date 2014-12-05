@@ -27,21 +27,30 @@
 (set-face-attribute 'mode-line-inactive nil
                     :box nil)
 
-(if (functionp 'scroll-bar-mode)
-    (scroll-bar-mode -1))
-
 (defun get-arrow-dots
   (leftp width height)
-  (mapconcat
-   (apply-partially 'format "\"%s\"")
-   (mapcar
-    (lambda (n)
-       (let* ((nx (if (< n (/ height 2)) n (- height n)))
-              (dots (make-string nx ?.))
-              (spaces (make-string (- width nx) ? )))
-         (if leftp (concat dots spaces) (concat spaces dots))))
-    (number-sequence 1 height))
-   ",\n"))
+  (let* ((halfheight (/ height 2)))
+    (mapconcat
+     (apply-partially 'format "\"%s\"")
+     (mapcar
+      (lambda (n)
+  (let* ((nx (if (< n halfheight) n (- height n)))
+         (dots (make-string nx ?.))
+         (spaces (make-string (- width nx) ? )))
+    (if leftp
+        (concat dots spaces)
+      (concat spaces dots))))
+      (arrow-number-sequence height))
+     ",\n")))
+
+(defun arrow-number-sequence
+  (height)
+  (if (oddp height)
+      (number-sequence 1 height)
+    (let* ((halfheight (/ height 2)))
+      (append
+       (number-sequence 1 halfheight)
+       (cons halfheight (number-sequence (1+ halfheight) (1- height)))))))
 
 (defun get-arrow-xpm
   (direction width height &optional color1 color2)
@@ -343,14 +352,33 @@ install the memoized function over the original function."
     (defun get-scroll-bar-mode () scroll-bar-mode))
 
 (defun powerline-make-fill
-  (color)
+  (color right-indent)
   ;; justify right by filling with spaces to right fringe, 20 should be calculated
   (let ((plface (powerline-make-face color)))
     (if (eq 'right (get-scroll-bar-mode))
-        (propertize " " 'display '((space :align-to (- right-fringe 21)))
+        (propertize " " 'display `((space :align-to (- right-fringe ,(+ 1 right-indent))))
                     'face plface)
-      (propertize " " 'display '((space :align-to (- right-fringe 24)))
+      (propertize " " 'display `((space :align-to (- right-fringe ,(+ 4 right-indent))))
                   'face plface))))
+
+(defun strip-text-properties(txt)
+  (set-text-properties 0 (length txt) nil txt)
+  txt)
+
+(defun powerline-items-length
+  (powerline-items)
+  (length
+   (strip-text-properties
+    (format-mode-line
+     (list "%e"
+           powerline-items )))))
+
+(defun powerline-pull-right
+  (powerline-items)
+  (append
+   (list (powerline-make-fill powerline-color2  (powerline-items-length powerline-items)) )
+   powerline-items
+   ))
 
 (defun powerline-make-text
   (string color &optional fg localmap)
@@ -463,22 +491,29 @@ install the memoized function over the original function."
                                           (setq pmin (point-min)))
                                         (percent-xpm pmax pmin we ws 15 color1 color2))))
 
+(display-time-mode)
+(defpowerline display-time display-time-string)
+(setq display-time-format "%H:%M")
+
 (setq-default mode-line-format
               (list "%e"
-                    '(:eval (concat
-                             (powerline-lcl            'left   nil  )
-                             (powerline-rmw            'left   nil  )
-                             (powerline-buffer-id      'left   nil  powerline-color1  )
-                             (powerline-major-mode     'left        powerline-color1  )
-                             (powerline-minor-modes    'left        powerline-color1  )
-                             (powerline-narrow         'left        powerline-color1  powerline-color2  )
-                             (powerline-vc             'center                        powerline-color2  )
-                             (powerline-make-fill                                     powerline-color2  )
-                             (powerline-row            'right       powerline-color1  powerline-color2  )
-                             (powerline-make-text      ":"          powerline-color1  )
-                             (powerline-column         'right       powerline-color1  )
-                             (powerline-percent        'right  nil  powerline-color1  )
-                             (powerline-make-text      "  "    nil  )))))
+                    '(:eval (append
+                              (list
+                                      (powerline-lcl            'left   nil  )
+                                      (powerline-rmw            'left   nil  )
+                                      (powerline-buffer-id      'left   nil  powerline-color1  )
+                                      (powerline-major-mode     'left        powerline-color1  )
+                                      (powerline-minor-modes    'left        powerline-color1  )
+                                      (powerline-narrow         'left        powerline-color1  powerline-color2  )
+                                      (powerline-vc             'center                        powerline-color2  ))
+        (powerline-pull-right (list
+                                      (powerline-row            'right       powerline-color1  powerline-color2  )
+                                      (powerline-make-text      ":"          powerline-color1  )
+                                      (powerline-column         'right       powerline-color1  )
+                                      (powerline-percent        'right  nil  powerline-color1  )
+                                      (powerline-display-time   'right  nil)
+                                      (powerline-make-text      "  "    nil  )))
+))))
 
 (provide 'powerline)
 
