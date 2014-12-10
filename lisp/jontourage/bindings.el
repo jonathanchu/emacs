@@ -15,6 +15,7 @@
 ;; deletion
 (global-set-key (kbd "C-D") 'delete-char)
 (global-set-key (kbd "C-S-D") 'kill-word)
+(global-set-key (kbd "C-c C-o") 'just-one-space)
 
 ;; font-size
 (define-key global-map (kbd "C-=") 'text-scale-increase)
