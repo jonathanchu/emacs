@@ -1,5 +1,4 @@
 (require 'color-theme)
-(color-theme-initialize)
 ; (setq color-theme-is-global t)
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/vendor/custom-color-themes")
