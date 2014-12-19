@@ -1,11 +1,9 @@
 ;;; pymacs-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (pymacs-apply pymacs-call pymacs-exec pymacs-eval
-;;;;;;  pymacs-autoload pymacs-load) "pymacs" "pymacs.el" (21123
-;;;;;;  134 0 0))
+;;;### (autoloads nil "pymacs" "pymacs.el" (21652 26462 0 0))
 ;;; Generated autoloads from pymacs.el
 
 (autoload 'pymacs-load "pymacs" "\
@@ -58,15 +56,9 @@ equivalents, other structures are converted into Lisp handles.
 
 ;;;***
 
-;;;### (autoloads nil nil ("pymacs-pkg.el") (21123 134 136540 0))
-
-;;;***
-
-(provide 'pymacs-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; pymacs-autoloads.el ends here

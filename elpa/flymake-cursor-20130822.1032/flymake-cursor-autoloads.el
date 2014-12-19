@@ -1,10 +1,10 @@
 ;;; flymake-cursor-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-
+(add-to-list 'load-path (or (file-name-directory #$) (car load-path)))
 
-;;;### (autoloads (flyc/show-fly-error-at-point-pretty-soon flyc/show-fly-error-at-point-now)
-;;;;;;  "flymake-cursor" "flymake-cursor.el" (21131 54944 0 0))
+;;;### (autoloads nil "flymake-cursor" "flymake-cursor.el" (21652
+;;;;;;  39020 0 0))
 ;;; Generated autoloads from flymake-cursor.el
 
 (autoload 'flyc/show-fly-error-at-point-now "flymake-cursor" "\
@@ -29,16 +29,9 @@ second, does the flymake error message (if any) get displayed.
 
 ;;;***
 
-;;;### (autoloads nil nil ("flymake-cursor-pkg.el") (21131 54944
-;;;;;;  405247 0))
-
-;;;***
-
-(provide 'flymake-cursor-autoloads)
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
-;; coding: utf-8
 ;; End:
 ;;; flymake-cursor-autoloads.el ends here

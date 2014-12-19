@@ -1,9 +1,9 @@
 ;;; pymacs.el --- Interface between Emacs Lisp and Python
 
-;; Copyright © 2001, 2002, 2003, 2012 Progiciels Bourbeau-Pinard inc.
+;; Copyright Â© 2001, 2002, 2003, 2012 Progiciels Bourbeau-Pinard inc.
 
-;; Author: François Pinard <pinard@iro.umontreal.ca>
-;; Maintainer: François Pinard <pinard@iro.umontreal.ca>
+;; Author: FranÃ§ois Pinard <pinard@iro.umontreal.ca>
+;; Maintainer: FranÃ§ois Pinard <pinard@iro.umontreal.ca>
 ;; Created: 2001
 ;; Version: 0.25
 ;; Keywords: Python interface protocol
