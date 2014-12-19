@@ -121,11 +121,6 @@
 (setq scroll-step 1) ;; keyboard scroll one line at a time
 (setq scroll-conservatively 10000)
 
-;; highlight current line in linum mode
-(require 'hlinum)
-(hlinum-activate)
-(setq linum-highlight-in-all-buffersp t)
-
 ;; save place
 (require 'saveplace)
 (setq-default save-place t)
