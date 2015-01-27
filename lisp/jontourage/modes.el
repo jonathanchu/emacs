@@ -185,3 +185,11 @@
 ;; ag
 (add-to-list 'load-path "~/.emacs.d/vendor/ag.el")
 (require 'ag)
+
+; Highlight the call to ipdb
+; src http://pedrokroger.com/2010/07/configuring-emacs-as-a-python-ide-2/
+(defun annotate-pdb ()
+  (interactive)
+  (highlight-lines-matching-regexp "import ipdb")
+  (highlight-lines-matching-regexp "pdb.set_trace()"))
+(add-hook 'python-mode-hook 'annotate-pdb)
