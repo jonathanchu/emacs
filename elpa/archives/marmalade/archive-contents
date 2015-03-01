@@ -1905,9 +1905,6 @@
  (memoize .
 	  [(1 0 1)
 	   nil "Memoization functions" single])
- (melpa-repository .
-		   [(0 0 5)
-		    nil "add the melpa elpa repository to emacs" single])
  (mediawiki .
 	    [(2 2 3)
 	     nil "mediawiki frontend" single])
@@ -3289,14 +3286,12 @@
 			    (0)))
 			  "evil textobjects based on indentation" single])
  (evil-escape .
-	      [(1 6 0)
+	      [(2 11)
 	       ((emacs
 		 (24))
 		(evil
-		 (1 0 9))
-		(key-chord
-		 (0 6)))
-	       "Customizable key sequence to escape from insert state and everything else." single])
+		 (1 0 9)))
+	       "Escape from anything with a customizable key sequence" single])
  (evil .
        [(1 0 8)
 	((undo-tree
@@ -3428,7 +3423,7 @@
 	   [(1 4 6)
 	    nil "Screen for Emacsen" single])
  (elpy .
-       [(1 7 0)
+       [(1 7 1)
 	((company
 	  (0 8 2))
 	 (find-file-in-project
