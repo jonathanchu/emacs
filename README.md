@@ -1,3 +1,5 @@
+**This repo is no longer active. Please reference https://github.com/jonathanchu/dotemacs**
+
 Installation
 ------------
 
